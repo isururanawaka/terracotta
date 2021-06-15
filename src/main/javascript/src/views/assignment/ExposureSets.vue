@@ -58,13 +58,13 @@ export default {
     }),
   },
   beforeRouteEnter(to, from, next) {
-    // don't load new data after consent title screen
+    // don't load new data after assignment intro screen
     return store
       .dispatch("exposures/fetchExposures", to.params.experiment_id)
       .then(next, next);
   },
   beforeRouteUpdate(to, from, next) {
-    // don't load new data after consent title screen
+    // don't load new data after assignment intro screen
     return store
       .dispatch("exposures/fetchExposures", to.params.experiment_id)
       .then(next, next);
